@@ -1,0 +1,32 @@
+<Window x:Class="NetworkChat.Client.ConnectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Подключение к NetworkChat" Height="330" Width="390"
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+        Background="#171923">
+    <Grid Margin="22">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/><RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/><RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Подключение к чату" Foreground="White" FontSize="22"
+                   FontWeight="Bold" Margin="0,0,0,14"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Имя пользователя" Foreground="#AAB1C5"/>
+            <TextBox x:Name="NameBox" Text="User"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="IP сервера" Foreground="#AAB1C5"/>
+            <TextBox x:Name="HostBox" Text="127.0.0.1"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <StackPanel Width="155"><TextBlock Text="TCP порт" Foreground="#AAB1C5"/>
+                <TextBox x:Name="TcpPortBox" Text="5000"/></StackPanel>
+            <StackPanel Width="155"><TextBlock Text="UDP порт" Foreground="#AAB1C5"/>
+                <TextBox x:Name="UdpPortBox" Text="5001"/></StackPanel>
+        </StackPanel>
+        <Button Grid.Row="4" Content="Подключиться" Height="40" VerticalAlignment="Bottom"
+                Click="Connect_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "NetworkChat.Server": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:54704;http://localhost:54705"
+    }
+  }
+}
